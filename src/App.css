@@ -1,0 +1,14 @@
+.todo-container {
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: rgb(139, 139, 139);
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.select-todo:hover {
+  cursor: pointer;
+}
