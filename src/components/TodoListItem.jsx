@@ -33,7 +33,7 @@ export default function TodoListItem(props) {
   };
 
   return (
-    <div className={`${selectedTodo.selected ? "bg-warning" : "bg-light"} ps-2 pe-2 pt-3 pb-3 mt-2`}>
+    <div className={`${selectedTodo.selected ? "bg-info" : "bg-light"} ps-2 pe-2 pt-3 pb-3 mt-2`}>
       <div className="row">
         <div className="col-3">
           <button

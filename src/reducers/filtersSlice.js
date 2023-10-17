@@ -1,7 +1,7 @@
 const status = {
-  all: 'all',
-  active: 'active',
-  completed: 'completed'
+  all: 'All',
+  active: 'Active',
+  completed: 'Completed'
 }
 
 const initialState = {
@@ -15,6 +15,9 @@ const filtersReducer = (state = initialState, action) => {
       return { ...state, status: action.payload }
     case 'filters/categorySelected': {
       const prevCategories = [...state.categories]
+      if (prevCategories.includes(action.payload)) {
+        return state;
+      }
       prevCategories.push(action.payload)
       return { ...state, categories: prevCategories }
     }
@@ -26,6 +29,8 @@ const filtersReducer = (state = initialState, action) => {
 
         return true
       })}
+    case 'filters/categoryUnselectedAll':
+      return { ...state, categories: [] };
     default:
       return state
   }

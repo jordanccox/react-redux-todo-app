@@ -9,7 +9,9 @@ import { useDispatch } from "react-redux"
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      dispatch(({ type: 'todos/todoAdded', payload: text.trim() }))
+      dispatch(({ type: 'todos/todoAdded', payload: text.trim() }));
+      // dispatch({ type: 'filters/statusChanged', payload: "All" });
+      // dispatch({ type: 'filters/categoryUnselectedAll' });
       setText('')
     }
   }
